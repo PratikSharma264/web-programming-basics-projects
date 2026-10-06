@@ -1,0 +1,194 @@
+<html>
+<head>
+  <title>Youtube_Cpy</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+
+    /* Hide the checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #202020;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    /* Menu button in header */
+    label[for="menu-toggle"] {
+      color: white;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .search-bar {
+      margin-left: 20px;
+      width: 300px;
+      height: 28px;
+      padding: 4px;
+	  text-align: center;
+	  
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 50px; /* Push below header */
+      left: 0;
+      width: 200px;
+      height: calc(100% - 50px);
+      background-color: #202020;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .sidebar button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      color: white;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .sidebar button:hover {
+      background: #383838;
+    }
+
+    /* Show sidebar when checkbox is checked */
+    #menu-toggle:checked ~ .sidebar {
+      transform: translateX(0);
+    }
+
+    /* Main content */
+    .main-content {
+      margin-top: 60px;   /* Push below header */
+      margin-left: 20px;
+      padding: 20px;
+      flex: 1;
+      color: white;
+      transition: margin-left 0.3s ease;
+    }
+
+    /* Shift main content when sidebar is open */
+    #menu-toggle:checked ~ .main-content {
+      margin-left: 220px;
+    }
+
+    /* Video grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: #181818;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+
+	.S{
+		justify-content: center;
+	}
+	
+    .thumbnail {
+      display: block;
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .video-meta {
+      padding: 8px;
+    }
+
+    .video-title {
+      margin: 0 0 6px 0;
+      font-size: 0.95rem;
+      color: white;
+    }
+
+    .channel {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #a8a8a8;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Hidden checkbox for toggle -->
+  <input type="checkbox" id="menu-toggle">
+
+  <!-- Header -->
+  <header>
+    <label for="menu-toggle">☰</label>
+    <input id = "S" class="search-bar" type="text" placeholder="Search">
+    <button>🔍</button>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <button>Home</button>
+    <button>Shorts</button>
+    <button>Subscriptions</button>
+    <button>Library</button>
+    <button>History</button>
+    <button>Your Videos</button>
+    <button>Watch Later</button>
+    <button>Liked Videos</button>
+    <button>Show More</button>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <section class="video-section">
+      <div class="video-grid">
+        <article class="video-card">
+          <img class="thumbnail" src="https://via.placeholder.com/300x140.png?text=Video+1" alt="Thumbnail for Video 1">
+          <div class="video-meta">
+            <h3 class="video-title">Video Title 1</h3>
+            <p class="channel">Channel Name • 1.2M views • 2 days ago</p>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <img class="thumbnail" src="https://via.placeholder.com/300x140.png?text=Video+2" alt="Thumbnail for Video 2">
+          <div class="video-meta">
+            <h3 class="video-title">Video Title 2</h3>
+            <p class="channel">Channel Name • 250K views • 1 week ago</p>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <img class="thumbnail" src="https://via.placeholder.com/300x140.png?text=Video+3" alt="Thumbnail for Video 3">
+          <div class="video-meta">
+            <h3 class="video-title">Video Title 3</h3>
+            <p class="channel">Channel Name • 98K views • 3 days ago</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

